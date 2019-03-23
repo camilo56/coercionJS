@@ -1,3 +1,5 @@
+//Js has types, it's variables does not
+
 typeof "1991";        // "string"
 typeof 1991;          // "number"
 typeof true;          // "boolean"

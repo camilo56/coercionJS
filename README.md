@@ -5,6 +5,12 @@
 * number
 * boolean
 * undefined
+
 ### Could be considered as a type as well
 * null
 * function
+
+### Special values [examples](/specialValues.js)
+* NaN
+* Infinity, -Infinity
+* 0, -0
