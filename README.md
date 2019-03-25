@@ -41,3 +41,11 @@ It happens when a value needs to be represented as another type of value.
 * ToString
 * ToNumber
 * ToBoolean
+
+## Step 4: Explicit coercion [Examples](/explicitCoercion.js)
+
+this coercion happens as a result of the code you have written
+
+## Step 4: Implicit coercion [Examples](/implicitCoercion.js)
+
+It's considered as a side effect of another operation
