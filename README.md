@@ -46,6 +46,15 @@ It happens when a value needs to be represented as another type of value.
 
 this coercion happens as a result of the code you have written
 
-## Step 4: Implicit coercion [Examples](/implicitCoercion.js)
+## Step 5: Implicit coercion [Examples](/implicitCoercion.js)
 
 It's considered as a side effect of another operation
+
+## Step 6: == (double equal) Issues [Examples](/doubleEqualIssues.js)
+
+* allows coercion
+* Never use it to compare a true or false value
+
+## Step 7: === (triple equal) [Examples](/tripleEqual.js)
+
+disallows coercion

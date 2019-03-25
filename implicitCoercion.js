@@ -20,13 +20,6 @@ Infinity? "Yes": "No";             //"Yes"
 null? "Yes": "No";                 //"No"
 []? "Yes": "No";                   //"Yes"
 
-//cero is no coerced, false is coerted to number; 
-//Never (==) compare a true or false value
-
-0 == false ? "Yes": "No";          //"Yes"
-null == false ? "Yes": "No";       //"No" 
-Infinity == false ? "Yes": "No";   //"No" 
-
 // (|| and &&) test the values (if it is truthy or falsy), if the value is truthy they do not return the boolean, return the expresion value itself
 
 // (||) returns the value which is truthy (does no matter where it is, keeps checking all the expression till found some truthy, if not returns the last value)
