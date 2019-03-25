@@ -11,9 +11,18 @@ new RegExp("^a", "g"); // /^a/g
 new Date();            //Current date
 new Error("Camilo");   //Error: Camilo
 
+//----------- as a native funtions -----------
+
+String(1991);      //"1991"
+Number("1991");    //Number{1991}
+Number("camilo");  //Nan
+Object();          //{}
+Boolean("true");   //True
+Boolean(1234);     //True
+
 /* ------- Tips ------- */
 
-//- avoid creating an array with the native constructor, use this way instead of
+//- avoid creating an array with the native constructor, use this way instead
 var users = ["Camilo", "Cristian", "Chris"]
 
 //In case of needing to crate an array with N position and fill it, this EC2015 it's a good idea

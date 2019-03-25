@@ -33,3 +33,11 @@ They allow us transform a value to another
 * RegExp
 * Date
 * Error
+
+## Step 3: Abstract Operations [examples](/abstractOperations.js)
+
+It happens when a value needs to be represented as another type of value.
+
+* ToString
+* ToNumber
+* ToBoolean
