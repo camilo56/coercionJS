@@ -14,7 +14,7 @@ new Error("Camilo");   //Error: Camilo
 //----------- as a native funtions -----------
 
 String(1991);      //"1991"
-Number("1991");    //Number{1991}
+Number("1991");    //1991
 Number("camilo");  //Nan
 Object();          //{}
 Boolean("true");   //True
@@ -35,3 +35,5 @@ var properties = {name: "camilo", lastName: "colorado"}
 function myFunction(){ /* My code*/}
 var myFunction2 = function (){ /* My code*/}
 var myFunction2 = () => { /* My code*/}
+
+//https://www.ecma-international.org/ecma-262/9.0/index.html#sec-fundamental-objects

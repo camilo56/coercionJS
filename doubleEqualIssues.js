@@ -1,6 +1,13 @@
-//cero is no coerced, false is coerted to number;
 
+null == undefined ? "Yes": "No";   //"Yes"
+undefined == null ? "Yes": "No";   //"Yes"
+
+//cero is no coerced, false is coerted to number;
 0 == false ? "Yes": "No";          //"Yes"
+"0" == 0? "Yes": "No";             //"Yes"
+
+false == 0 ? "Yes": "No";           //"true"
+
 null == false ? "Yes": "No";       //"No" 
 Infinity == false ? "Yes": "No";   //"No"
 
@@ -11,7 +18,6 @@ Infinity == false ? "Yes": "No";   //"No"
 //next become false to a number Number(false) => 0, the comparison is going to be (0 == 0) => true 
 [] == false ? "Yes": "No";         //"Yes" 
 
-"0" == false? "Yes": "No";         //"Yes"
 0 == false? "Yes": "No";           //"Yes"
 0 == []? "Yes": "No";              //"Yes"
 "" == false? "Yes": "No";          //"Yes"
