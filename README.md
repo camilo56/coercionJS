@@ -10,13 +10,14 @@ Primitives are data that is not an Object and has no methods
 * string 
 * number
 * boolean
+
+* null
 * undefined
 * Symbol
 
 [Terms and definitions](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-terms-and-definitions)
 
 ### Could be considered as a type as well
-* null
 * objects
 * function
 
@@ -65,12 +66,14 @@ this coercion happens as a result of the code you have written
 It's considered as a side effect of another operation
 
 ## Step 6: == (double equal) Issues [Examples](/doubleEqualIssues.js)
-[Equality comparison](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-abstract-equality-comparison)
 
 * allows coercion
 * Never use it to compare a true or false value
 
+[Equality comparison](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-abstract-equality-comparison)
+
 ## Step 7: === (triple equal) [Examples](/tripleEqual.js)
-[Strict equality comparison](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-strict-equality-comparison)
 
 * disallows coercion
+
+[Strict equality comparison](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-strict-equality-comparison)

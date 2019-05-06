@@ -5,13 +5,13 @@ new String(1991);      //String{"1991"}
 new Number("1991");    //Number{1991}
 new Object();          //{}
 new Boolean("true");   //String{True}
-new Function("milo");  //ƒ anonymous() {milo}
+new Function("console.log('milo')");  //ƒ anonymous() {console.log('milo')}
 new Array(3);          //(3) [empty × 3]. Empty array with the property "length" as 3
 new RegExp("^a", "g"); // /^a/g
 new Date();            //Current date
 new Error("Camilo");   //Error: Camilo
 
-//----------- as a native funtions -----------
+//----------- As a native functions -----------
 
 String(1991);      //"1991"
 Number("1991");    //1991
@@ -35,5 +35,10 @@ var properties = {name: "camilo", lastName: "colorado"}
 function myFunction(){ /* My code*/}
 var myFunction2 = function (){ /* My code*/}
 var myFunction2 = () => { /* My code*/}
+
+//Just for fun
+var milo = "I'm in global";
+var camilo = new Function("console.log(`Im from a service, ${milo}`)")
+camilo();      //Im from a service, I'm in global
 
 //https://www.ecma-international.org/ecma-262/9.0/index.html#sec-fundamental-objects

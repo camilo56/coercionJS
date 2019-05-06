@@ -3,7 +3,7 @@
 
 /*  Converts its input argument to a non-Object type
     1) runs the operation valuesOf() which return a primitive (for ([] or {}) returns itself)
-    2) if the previous fails run toString() and returns its value */
+    2) if the previous fails, run toString() and returns its value*/
 
 //-------- String --------
 // https://www.ecma-international.org/ecma-262/9.0/index.html#sec-tostring
@@ -23,6 +23,7 @@ String([{name: "camilo"}, 1,2,3])   //"[object Object],1,2,3"
 
 [].toString()                     //""
 [1,9,9,1].toString()              //"1,9,9,1"
+[null].toString()                 //""
 [null, null].toString()           //","
 [undefined, undefined].toString() //","
 [[], [], [[],[]]].toString()      //",,,"
@@ -45,17 +46,18 @@ Number(true);        //1
 Number(null);        //0
 Number(undefined);   //NaN
 
-//First, call toPrimitive() operation which runs valuesOf(), which is supposed to returns primitive 
+
+//First, call toPrimitive() which runs valuesOf(), which is supposed to returns a non-Object type
 //(valuesof has definitions from objects, no for arrays, it means to do nothing)
-//if valuesOf() is no present (did nothing) or returns resomething no Primitive ToNumber() is going to be applied, 
+//if valuesOf() is no present (did nothing) or returns resomething no Primitive, ToNumber() is going to be applied, 
 //the values converted as a string will become a number
-Number({});          //NaN
-Number([]);          //0
-Number(["1991"]);    //1991
-Number([null]);      //0 ???
-Number([undefined]); //0 ???
-Number([1,2,3]);     //NaN
-Number([[]]);        //0
+Number({});          //ToString => [object Object] => ToNumber => NaN
+Number([]);          //ToString => "" => ToNumber => 0
+Number(["1991"]);    //ToString => "1991" => ToNumber => 1991
+Number([null]);      //ToString => "" => ToNumber => 0
+Number([undefined]); //ToString => "" => ToNumber => 0
+Number([1,2,3]);     //ToString => "1,2,3" => ToNumber => NaN
+Number([[]]);        //ToString => "" => ToNumber => 0
 
 
 // --------- Boolean ------------

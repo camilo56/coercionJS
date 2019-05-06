@@ -10,6 +10,7 @@
 
 // unlike the other ones (+) operator has two meaning, a sum only if both of the values are number, or addition if one of the values is a string 
 1991 + "";          //"1991";
+1991 + "5";         //"19915";
 1991 + 1;           //"1992";
 
 //conditionals always required boolean values, if they get something different that value is going to be coerced as a boolean
@@ -18,7 +19,7 @@
 0 ? "Yes": "No";                   //"No"
 Infinity? "Yes": "No";             //"Yes"
 null? "Yes": "No";                 //"No"
-[]? "Yes": "No";                   //"Yes"
+[] ? "Yes": "No";                   //"Yes"
 
 // (|| and &&) test the values (if it is truthy or falsy), if the value is truthy they do not return the boolean, return the expresion value itself
 

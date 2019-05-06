@@ -14,6 +14,7 @@ typeof Infinity;      //"number"
 /* ------- Tips ------- */
 //to determine is a negative cero (-0) to use:
 Object.is(-0, -0)     //true
+Object.is(0, -0)     //false
 
 //NaN is the unique value in JS that is different from itself
 NaN === NaN           //false

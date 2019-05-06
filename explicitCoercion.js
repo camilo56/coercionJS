@@ -20,7 +20,11 @@ Boolean("camilo");              //true
 Boolean(~"camilo".indexOf("t")) //false  
 
 // ---------- tips ------------
-//The simbole ~ run the operation -(n+1) (The abstract operation ToInt32) for instance: -(n+1) = -0;
+//https://www.ecma-international.org/ecma-262/9.0/index.html#sec-toint32
+//The simbole ~ run the operation -(n+1) (The abstract operation ToInt32) for instance: -(n+1);
+//-(0+1) = -1
+//-(2+1) = -3
+//-(4+1) = -5
 
 [1,2,3,4,1,1,2,4,5].reduce((accum, current)=> {  //{1: 3, 2: 2, 3: 1, 4: 2, 5: 1}
 	accum[current] = -~accum[current]
