@@ -12,6 +12,12 @@
 1991 + "";          //"1991";
 1991 + "5";         //"19915";
 1991 + 1;           //"1992";
+12 + {}             //"12[object Object]"
+12 + []             //"12"
+12 + [2]            //"122"
+12 + [2,2,2]        //"122,2,2"
+12 + [2,{}]         //"122,[object Object]"
+12 + [null,null]    //"12,"
 
 //conditionals always required boolean values, if they get something different that value is going to be coerced as a boolean
 
@@ -31,7 +37,7 @@ false || null || "camilo";      //"camilo"
 false || null || undefined;     //undefined
 
 //(&&) check all the expression if all the elements are truthy returns the last truthy value,
-//if one of them is falsy return it is returned as soon as they found it up
+//if one of them is falsy return it as soon as they found it up
 
 1991 && true                    //true
 12 && 1991 && true && "camilo"; //"camilo"
