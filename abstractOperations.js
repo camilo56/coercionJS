@@ -1,12 +1,12 @@
 //-------- ToPrimitive --------
-//https://www.ecma-international.org/ecma-262/9.0/index.html#sec-toprimitive
+//https://www.ecma-international.org/ecma-262/10.0/index.html#sec-toprimitive
 
 /*  Converts its input argument to a non-Object type
     1) runs the operation valuesOf() which return a primitive (for ([] or {}) returns itself)
     2) if the previous fails, run toString() and returns its value*/
 
 //-------- String --------
-// https://www.ecma-international.org/ecma-262/9.0/index.html#sec-tostring
+// https://www.ecma-international.org/ecma-262/10.0/index.html#sec-tostring
 
 String(null);                       //"null"
 String(true);                       //"true"
@@ -24,6 +24,7 @@ String([{name: "camilo"}, 1,2,3])   //"[object Object],1,2,3"
 [].toString()                     //""
 [1,9,9,1].toString()              //"1,9,9,1"
 [null].toString()                 //""
+[undefined].toString()            //""
 [null, null].toString()           //","
 [undefined, undefined].toString() //","
 [[], [], [[],[]]].toString()      //",,,"
@@ -31,7 +32,7 @@ String([{name: "camilo"}, 1,2,3])   //"[object Object],1,2,3"
 [,,,,].toString()                 //",,,"
 
 // --------- Number ------------
-//https://www.ecma-international.org/ecma-262/9.0/index.html#sec-tonumber
+//https://www.ecma-international.org/ecma-262/10.0/index.html#sec-tonumber
 
 Number("");          //0 
 Number("0");         //0
@@ -62,10 +63,10 @@ Number([[]]);        //ToString => "" => ToNumber => 0
 
 // --------- Boolean ------------
 //Ruled by the truthy and falsy values, the specification only defines the "falsy" values, it means any other values could be considered "truthy"
-//https://www.ecma-international.org/ecma-262/9.0/index.html#sec-toboolean
+//https://www.ecma-international.org/ecma-262/10.0/index.html#sec-toboolean
 
 //Falsy
-""
+"" // (its length is zero)
 0, +0, -0
 null
 NaN
